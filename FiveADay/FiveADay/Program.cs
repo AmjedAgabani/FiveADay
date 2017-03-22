@@ -11,17 +11,19 @@ namespace FiveADay
         static void Main(string[] args)
         {
             Console.WriteLine("What's your name?");
-            string name = Console.ReadLine();
+            var name = Console.ReadLine();
 
             Console.WriteLine("Okay " + name + ", How many fruits have you had to eat today?");
-            int numberOfFruit = int.Parse(Console.ReadLine());
+            var numberOfFruit = int.Parse(Console.ReadLine());
 
             if (numberOfFruit > 4)
             {
-                Console.WriteLine("Good job, " + name + ". You've had your five a day!");
+                Console.WriteLine($"Good job, {name}. You've had your five a day!");
             }
             else
-                Console.WriteLine("What are you doing " + name + "?!? Go and have your five a day!");
+            {
+                Console.WriteLine($"What are you doing {name}?!? Go and have your five a day!");
+            }
         }
     }
 }
